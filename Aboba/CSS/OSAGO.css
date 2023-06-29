@@ -1,0 +1,173 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  section {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 60%;
+    margin-bottom: 40px; /* добавлен разрыв между секциями */
+    }
+
+
+/* OSAGO section styles */
+#osago {
+    background-color: #fff;
+    padding: 50px;
+}
+
+#osago h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#osago p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#osago a {
+    background-color: #3300FF;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#osago a:hover {
+    background-color: #fff;
+    color: #3300FF;
+    border: 1px solid #3300FF;
+}
+
+/* OSAGO-info section styles */
+#osago-info {
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
+#osago-info h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#osago-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* Преимущества и недостатки ОСАГО стили */
+#osago-pros-cons {
+    background-color: #f9f9f9;
+    padding: 50px;
+}
+
+#osago-pros-cons h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#osago-pros-cons h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#osago-pros-cons ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#osago-pros-cons li {
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#osago-pros-cons .pros {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+#osago-pros-cons .cons {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* OSAGO-price section styles */
+#osago-price {
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
+#osago-price h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#osago-price p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* OSAGO-form section styles */
+#osago-form {
+    background-color: #fff;
+    padding: 50px;
+}
+
+#osago-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#osago-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#osago-form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#osago-form input[type="text"],
+#osago-form input[type="email"],
+#osago-form input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#osago-form #submit-btn {
+    background-color: #3300FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#osago-form #submit-btn:hover {
+    background-color: #fff;
+    color: #3300FF;
+    border: 1px solid #3300FF;
+}
+
+
+

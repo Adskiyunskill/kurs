@@ -1,0 +1,213 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  section {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 60%;
+    margin-bottom: 40px; /* добавлен разрыв между секциями */
+    }
+  
+
+
+
+  
+  /* Main section styles */
+  #main {
+    background-color: #fff;
+    padding: 50px;
+    margin-top: 120px;
+  }
+  
+  #main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #main p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* OSAGO section styles */
+#osago {
+  background-color: #fff;
+  padding: 50px;
+  }
+  
+  #osago h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  }
+  
+  #osago h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  #osago p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  }
+  
+  #osago ul {
+  margin-bottom: 20px;
+  }
+  
+  #osago li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  }
+  
+  #osago a {
+  background-color: #3300FF;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  }
+  
+  #osago a:hover {
+  background-color: #fff;
+  color: #3300FF;
+  border: 1px solid #3300FF;
+  }
+  
+  /* KASKO section styles */
+  #kasko {
+    background-color: #fff;
+    padding: 50px;
+  }
+  
+  #kasko h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  #kasko p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  #kasko a {
+    background-color: #3300FF;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #kasko a:hover {
+    background-color: #fff;
+    color: #3300FF;
+    border: 1px solid #3300FF;
+  }
+  
+  
+
+  #green-card {
+    background-color: #fff;
+    padding: 20px;
+    }
+    
+    #green-card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    
+    #green-card p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    }
+    
+    #green-card ul {
+    margin-bottom: 20px;
+    }
+    
+    #green-card li {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    }
+    
+    #green-card a {
+    background-color: #3300FF;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    }
+    
+    #green-card a:hover {
+    background-color: #fff;
+    color: #3300FF;
+    border: 1px solid #3300FF;
+    }
+
+    
+    /*Для section "why_us":*/
+    .why-us {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      padding: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .why-us__image {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 50px;
+    }
+    
+    .why-us__image img {
+      max-width: 100%;
+      display: block;
+    }
+    
+    .why-us__content {
+      width: 60%;
+    }
+    
+    .why-us__content h3 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    
+    .why-us__content p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #666;
+    }
+    
+
+     
+
