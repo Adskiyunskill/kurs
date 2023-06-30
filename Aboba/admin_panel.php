@@ -1,16 +1,4 @@
 <?php
-// Подключение к базе данных
-$db_host = '127.0.0.1:3306';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'mydbs2';
-
-
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-if ($conn->connect_error) {
-    die("Ошибка подключения к базе данных: " . $conn->connect_error);
-}
-
 // Проверка, была ли выполнена аутентификация
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -18,20 +6,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-// Получение информации о пользователе
-$login = $_SESSION['login'];
-$query = "SELECT * FROM user WHERE login = '$login'";
-$result = $conn->query($query);
+// Подключение к базе данных
+$db_host = '127.0.0.1:3306';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'mydbs2';
 
-if ($result->num_rows == 1) {
-    $user = $result->fetch_assoc();
-} else {
-    // Не удалось найти информацию о пользователе
-    header("Location: login.php");
-    exit;
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+if ($conn->connect_error) {
+    die("Ошибка подключения к базе данных: " . $conn->connect_error);
 }
 
-$conn->close();
+// Получение всех договоров
+$query = "SELECT * FROM insurance_policies";
+$result = $conn->query($query);
 ?>
 
 <!DOCTYPE html>
@@ -214,21 +202,24 @@ footer p {
         </div>
 
         <div class="main-content">
-            <div class="section">
-                <h1>Профиль пользователя</h1>
-                <div class="profile-info">
-                    <p><strong>Логин:</strong> <?php echo $user['login']; ?></p>
-                    <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
-                    <p><strong>Имя:</strong> <?php echo $user['first_name']; ?></p>
-                    <p><strong>Фамилия:</strong> <?php echo $user['last_name']; ?></p>
-                    <!-- Другая информация о пользователе -->
-                    <p><strong>Телефон:</strong> <?php echo $user['tel_numb']; ?></p>
-                    <p><strong>Номер страховки:</strong> <?php echo $user['num_strax']; ?></p>
-
-                    
-                </div>
+        <div class="section">
+        <h2>Договоры страхования</h2>
+            <div class="profile-info">
+            <?php
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "Договор ID: " . $row['id_Insurance_policies'] . ", Пользователь: " . $row['id_user'] . "<br>";
+                    }
+                } else {
+                    echo "Нет доступных договоров";
+                }
+                ?>
             </div>
         </div>
+        </div>
+
+       
+    </div>
     </div>
 
     <footer id="footer">

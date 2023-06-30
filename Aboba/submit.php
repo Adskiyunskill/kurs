@@ -3,7 +3,7 @@
 $db_host = '127.0.0.1:3306';
 $db_user = 'root';
 $db_pass = '';
-$db_name = 'mydb';
+$db_name = 'mydbs2';
 
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);

@@ -1,10 +1,10 @@
 <?php
 
 // Настройки подключения к базе данных
-$host = 'localhost';
-$dbname = 'my_database';
-$user = 'my_username';
-$password = 'my_password';
+$host = '127.0.0.1:3306';
+$dbname = 'mydbs2';
+$user = 'root';
+$password = ' ';
 
 // Подключение к базе данных с помощью PDO
 try {
