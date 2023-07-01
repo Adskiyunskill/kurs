@@ -10,15 +10,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 $db_host = '127.0.0.1:3306';
 $db_user = 'root';
 $db_pass = '';
-$db_name = 'mydbs2';
+$db_name = 'mydb';
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
     die("Ошибка подключения к базе данных: " . $conn->connect_error);
 }
 
-// Получение всех договоров
-$query = "SELECT * FROM insurance_policies";
+// Получение всех пользователей
+$query = "SELECT * FROM user";
 $result = $conn->query($query);
 ?>
 
@@ -60,7 +60,7 @@ section {
 #main {
   background-color: #fff;
   padding: 50px;
-  margin-top: 70px;
+  margin-top: 165px;
 }
 
 #main h1 {
@@ -76,7 +76,7 @@ section {
 /* Profile section styles */
 .profile-info {
   margin: 0 auto;
-  width: 1000px;
+  width: auto;
   max-width: 70%;
   margin-top: 120px;
   margin-bottom: 40px;
@@ -126,19 +126,17 @@ footer p {
 /* Responsive styles */
 @media (max-width: 767px) {
   section {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
 .sidebar {
-  width: 30%;
   padding: 30px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 120px;
   margin-right: auto;
-  margin-left: 235px;
 }
 
 
@@ -167,6 +165,31 @@ footer p {
   color: #000;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #e0e0e0;
+}
     </style>
 </head>
 
@@ -179,12 +202,10 @@ footer p {
             </div>
             <nav>
                 <ul class="nav">
-                    <a href="index.php">Главная</a>
-                    <a href="OSAGO.php">ОСАГО</a>
-                    <a href="CASCO.php">КАСКО</a>
-                    <a href="Express-CASCO.php">Экспресс КАСКО</a>
-                    <a href="greencard.php">Зелённая карта</a>
-                    <a href="login.php" class="btn-login" id="loginBtn">Личный кабинет</a>
+                <a href="admin_profile.php">Главная</a>
+                <a href="admin_insurance.php">Страховки</a><
+                <a href="admin_users.php">Пользователи</a>
+                <a href="logout.php">Выход</a>
                 </ul>
             </nav>
         </div>
@@ -195,29 +216,38 @@ footer p {
             <h3>Разделы</h3>
             <ul class="sidebar-nav">
                 <li><a href="#">Настройки</a></li>
-                <li><a href="#">Смена данных</a></li>
+                <li><a href="changing.php">Смена данных</a></li>
                 <li><a href="#">Документы</a></li>
                 <a class="btn-login" href="logout.php">Выйти</a>
             </ul>
         </div>
 
-        <div class="main-content">
-        <div class="section">
-        <h2>Договоры страхования</h2>
-            <div class="profile-info">
-            <?php
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "Договор ID: " . $row['id_Insurance_policies'] . ", Пользователь: " . $row['id_user'] . "<br>";
-                    }
-                } else {
-                    echo "Нет доступных договоров";
-                }
-                ?>
-            </div>
-        </div>
-        </div>
+        <section id="main">
+        <h1>Пользователи</h1>
 
+        <?php
+        if ($result->num_rows > 0) {
+            echo "<table>";
+            echo "<tr><th>Login</th><th>Password</th><th>Tel_numb</th><th>Email</th><th>Num_strax</th><th>First_name</th><th>Last_name</th></tr>";
+
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['login'] . "</td>";
+                echo "<td>" . $row['password'] . "</td>";
+                echo "<td>" . $row['tel_numb'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['num_strax'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "</tr>";
+            }
+
+            echo "</table>";
+        } else {
+            echo "Нет доступных пользователей";
+        }
+        ?>
+        </section>
        
     </div>
     </div>

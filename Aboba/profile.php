@@ -3,7 +3,7 @@
 $db_host = '127.0.0.1:3306';
 $db_user = 'root';
 $db_pass = '';
-$db_name = 'mydbs2';
+$db_name = 'mydb';
 
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
@@ -207,7 +207,7 @@ footer p {
             <h3>Разделы</h3>
             <ul class="sidebar-nav">
                 <li><a href="#">Настройки</a></li>
-                <li><a href="#">Смена данных</a></li>
+                <li><a href="changing.php">Смена данных</a></li>
                 <li><a href="#">Документы</a></li>
                 <a class="btn-login" href="logout.php">Выйти</a>
             </ul>
