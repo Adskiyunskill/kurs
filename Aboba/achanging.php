@@ -275,18 +275,12 @@ footer p {
         <a href="index.php"><img src="images/logo.png" alt="Логотип"></a>
       </div>
       <nav>
-        <ul class="nav">
-          <a href="index.php">Главная</a>
-          <a href="OSAGO.php">ОСАГО</a>
-          <a href="CASCO.php">КАСКО</a>
-          <a href="Express-CASCO.php">Экспресс КАСКО</a>
-          <a href="greencard.php">Зеленая карта</a>
-          <?php if ($authenticated) { ?>
-            <a href="logout.php" class="btn-login" id="loginBtn">Выйти</a>
-          <?php } else { ?>
-            <a href="login.php" class="btn-login" id="loginBtn">Личный кабинет</a>
-          <?php } ?>
-        </ul>
+      <ul class="nav">
+                <a href="admin_panel.php">В профиль</a>
+                <a href="admin_insurance.php">Страховки</a>
+                <a href="admin_users.php">Пользователи</a>
+                <a href="logout.php">Выход</a>
+                </ul>
       </nav>
     </div>
   </header>

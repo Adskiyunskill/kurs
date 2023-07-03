@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Страхование автомобиля ОСАГО</title>
+    <title>Страхование автомобиля</title>
     <link rel="icon" href="images/logo.png">
     <!-- Подключение CSS-стилей -->
     <link rel="stylesheet" type="text/css" href="CSS/header.css">
@@ -26,24 +26,24 @@
         }
 
 
-        /* OSAGO section styles */
-        #osago {
+        /* Green card section styles */
+        #green-card {
             background-color: #fff;
             padding: 50px;
         }
 
-        #osago h2 {
+        #green-card h2 {
             font-size: 30px;
             margin-bottom: 20px;
         }
 
-        #osago p {
+        #green-card p {
             font-size: 18px;
             line-height: 1.5;
             margin-bottom: 20px;
         }
 
-        #osago a {
+        #green-card a {
             background-color: #3300FF;
             color: #fff;
             display: inline-block;
@@ -53,82 +53,107 @@
             border-radius: 5px;
         }
 
-        #osago a:hover {
+        #green-card a:hover {
             background-color: #fff;
             color: #3300FF;
             border: 1px solid #3300FF;
         }
 
-        /* OSAGO-info section styles */
-        #osago-info {
+        /* Green card info section styles */
+        #green-card-info {
             background-color: #f5f5f5;
             padding: 50px;
         }
 
-        #osago-info h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
+        #green-card-info a {
+            background-color: #3300FF;
+            color: #fff;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
-        #osago-info p {
+        #green-card-info a:hover {
+            background-color: #fff;
+            color: #3300FF;
+            border: 1px solid #3300FF;
+        }
+
+        #green-card-info h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        #green-card-info p {
             font-size: 18px;
             line-height: 1.5;
             margin-bottom: 20px;
+            color: #666666;
         }
 
+        #green-card-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #666666;
+        }
 
-        /* Преимущества и недостатки ОСАГО стили */
-        #osago-pros-cons {
+        #green-card-info li {
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        /* Advantages and disadvantages of Green card styles */
+        #green-card-pros-cons {
             background-color: #f9f9f9;
             padding: 50px;
         }
 
-        #osago-pros-cons h2 {
+        #green-card-pros-cons h2 {
             font-size: 30px;
             margin-bottom: 20px;
         }
 
-        #osago-pros-cons h3 {
+        #green-card-pros-cons h3 {
             font-size: 24px;
             margin-bottom: 10px;
         }
 
-        #osago-pros-cons ul {
+        #green-card-pros-cons ul {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
 
-        #osago-pros-cons li {
+        #green-card-pros-cons li {
             width: 48%;
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        #osago-pros-cons .pros {
-            background-color: rgba(0, 255, 0, 0.2);
+        #green-card-pros-cons .pros {
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
         }
 
-        #osago-pros-cons .cons {
-            background-color: rgba(255, 0, 0, 0.2);
+        #green-card-pros-cons .cons {
+            border: 1px solid #FF0000;
+            color: #FF0000;
         }
 
-        /* OSAGO-price section styles */
-        #osago-price {
-            background-color: #f5f5f5;
-            padding: 50px;
-        }
-
-        #osago-price h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        #osago-price p {
-            font-size: 18px;
-            line-height: 1.5;
-            margin-bottom: 20px;
+        /* Footer styles */
+        footer {
+            background-color: #333333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
         }
 
         #osago-form {
@@ -217,10 +242,12 @@
             display: none;
         }
 
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
-    <!-- Подключение JavaScript-файла -->
-    <script src="JS/script.js"></script>
-    <script src="JS/scripth.js"></script>
 </head>
 
 <body>
@@ -233,72 +260,71 @@
             <nav>
                 <ul class="nav">
                     <a href="index.php">Главная</a>
-                    <a href="OSAGO.php" class="active">ОСАГО</a>
+                    <a href="OSAGO.php">ОСАГО</a>
                     <a href="CASCO.php">КАСКО</a>
-                    <a href="greencard.php">Зелённая карта</a>
+                    <a href="greencard.php" class="active">Зелённая карта</a>
                     <a href="documents.php">Документы</a>
                     <a href="login.php" class="btn-login" id="loginBtn">Личный кабинет</a>
                 </ul>
             </nav>
         </div>
     </header>
-
-
-    <!-- Блок "ОСАГО" -->
-    <section id="osago">
-        <h2>Обязательное страхование автогражданской ответственности (ОСАГО)</h2>
-        <p>ОСАГО является обязательным видом страхования для всех автовладельцев в России. Мы предлагаем выгодные условия и быстрое оформление полиса.</p>
-        <a href="#osago-form">Оформить ОСАГО</a>
+    <section id="green-card">
+        <h2>Зеленая карта</h2>
+        <p>Зеленая карта (или международное страховое свидетельство) - это документ, который подтверждает наличие обязательной страховки ответственности владельца автомобиля за причинение вреда третьим лицам при дорожно-транспортном происшествии на территории других государств.</p>
+        <p>Зеленая карта является обязательным документом при пересечении границы и вождении автомобиля за пределами страны регистрации. Она гарантирует, что в случае дорожно-транспортного происшествия, произошедшего за границей, водитель имеет достаточную страховую защиту для возмещения ущерба, причиненного третьим лицам.</p>
+        <a href="green-card.html">Подробнее</a>
     </section>
-
-    <!-- Блок "Что такое ОСАГО" -->
-    <section id="osago-info">
-        <h2>Что такое ОСАГО</h2>
-        <p>Обязательное страхование автогражданской ответственности (ОСАГО) – это вид страхования, который покрывает ущерб, причиненный имуществу или здоровью других людей в результате ДТП, в котором виноват владелец или водитель автомобиля. ОСАГО является обязательным для всех автовладельцев в России и предоставляет защиту от финансовых потерь в случае возмещения ущерба пострадавшим.</p>
-    </section>
-
-    <!-- Блок "Преимущества и недостатки ОСАГО" -->
-    <section id="osago-pros-cons">
-        <h2>Преимущества и недостатки ОСАГО</h2>
-        <h3>Преимущества ОСАГО:</h3>
+    <section id="green-card-info">
+        <h2>Как получить зеленую карту</h2>
+        <p>Для получения зеленой карты необходимо обратиться в страховую компанию, которая осуществляет страхование автомобилей. Обычно зеленую карту можно оформить вместе с полисом ОСАГО или КАСКО.</p>
         <ul>
-            <li class="pros">Обязательность для всех автовладельцев.</li>
-            <li class="pros">Покрытие ущерба пострадавшим.</li>
-            <li class="pros">Быстрое оформление полиса.</li>
-            <li class="pros">Выгодные условия страхования.</li>
+            <li>При оформлении зеленой карты необходимо предоставить следующие документы:
+                <ul>
+                    <li>Паспорт водителя</li>
+                    <li>ПТС (паспорт транспортного средства)</li>
+                    <li>Свидетельство о регистрации автомобиля</li>
+                </ul>
+            </li>
+            <li>Зеленая карта выдается на определенный срок, обычно совпадающий с сроком действия страхового полиса.</li>
+            <li>Получение зеленой карты платное. Стоимость может варьироваться в зависимости от страховой компании и срока действия карты.</li>
+        </ul>
+        <a href="green-card-info.html">Подробнее</a>
+    </section>
+    <section id="green-card-pros-cons">
+        <h2>Преимущества и недостатки зеленой карты</h2>
+        <ul>
+            <li class="pros">Гарантия страховой защиты за границей</li>
+            <li class="pros">Обязательный документ при пересечении границы</li>
+            <li class="pros">Защита от финансовых потерь в случае дорожно-транспортного происшествия за границей</li>
+            <li class="cons">Дополнительные расходы на оформление и получение</li>
+            <li class="cons">Ограниченный срок действия</li>
+            <li class="cons">Может потребоваться дополнительное страхование в некоторых странах</li>
         </ul>
     </section>
 
+    <section id="osago-form">
+        <h2>Оформление зеленой карты</h2>
+        <form action="greencard.php" method="post" onsubmit="return processForm(event)">
+            <label for="car-details">Марка и год выпуска автомобиля:</label>
+            <input type="text" id="car-details" name="car-details" required>
 
-    <!-- Блок "Ценовой вопрос ОСАГО" -->
-    <section id="osago-price">
-        <h2>Ценовой вопрос ОСАГО</h2>
-        <p>Стоимость ОСАГО зависит от различных факторов, включая марку и модель автомобиля, его год выпуска, мощность двигателя, стаж вождения владельца и другие параметры. Чтобы узнать точную стоимость страховки, вы можете воспользоваться онлайн-калькулятором на нашем сайте или связаться с нашими специалистами.</p>
+
+            <input type="submit" value="Отправить" id="submit-btn">
+        </form>
+        <div id="insurance-details" style="display: none;">
+            <h3>Выберите период страхования:</h3>
+            <label for="insurance-start">С:</label>
+            <input type="date" id="insurance-start" required>
+            <label for="insurance-end">По:</label>
+            <input type="date" id="insurance-end" required>
+            <button onclick="calculatePrice()">Рассчитать стоимость страховки</button>
+            <p id="insurance-price" style="display: none;"></p>
+            <button onclick="continueContract()">Продолжить</button>
+        </div>
     </section>
 
-    <!-- Блок "Форма заполнения ОСАГО" -->
-    <!-- Блок "Форма заполнения ОСАГО" -->
-    <section id="osago-form">
-    <h2>Стоимость страхования ОСАГО</h2>
-    <form action="decoration.php" method="post" onsubmit="return processForm(event)">
-        <label for="car-details">Марка и год выпуска автомобиля:</label>
-        <input type="text" id="car-details" name="car-details" required>
-
-        <input type="submit" value="Отправить" id="submit-btn">
-    </form>
-    <div id="insurance-details" style="display: none;">
-        <h3>Выберите период страхования:</h3>
-        <label for="insurance-start">С:</label>
-        <input type="date" id="insurance-start" required>
-        <label for="insurance-end">По:</label>
-        <input type="date" id="insurance-end" required>
-        <button onclick="calculatePrice()">Рассчитать стоимость страховки</button>
-        <p id="insurance-price" style="display: none;"></p>
-        <button onclick="continueContract()">Продолжить</button>
-    </div>
-</section>
-
-<script>
+    <script>
     var formData = {};
 
     function processForm(event) {
@@ -331,14 +357,8 @@
         localStorage.setItem('formData', JSON.stringify(formData));
         window.location.href = 'decoration.php';
     }
-</script>
+    </script>
 
-
-</script>
-
-
-
-    <!-- Футер сайта -->
     <footer id="footer">
         <div>
             <div class="container">

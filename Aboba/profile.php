@@ -194,7 +194,6 @@ footer p {
                     <a href="index.php">Главная</a>
                     <a href="OSAGO.php">ОСАГО</a>
                     <a href="CASCO.php">КАСКО</a>
-                    <a href="Express-CASCO.php">Экспресс КАСКО</a>
                     <a href="greencard.php">Зелённая карта</a>
                     <a href="login.php" class="btn-login" id="loginBtn">Личный кабинет</a>
                 </ul>
@@ -215,7 +214,6 @@ footer p {
 
         <div class="main-content">
             <div class="section">
-                <h1>Профиль пользователя</h1>
                 <div class="profile-info">
                     <p><strong>Логин:</strong> <?php echo $user['login']; ?></p>
                     <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
@@ -224,6 +222,7 @@ footer p {
                     <!-- Другая информация о пользователе -->
                     <p><strong>Телефон:</strong> <?php echo $user['tel_numb']; ?></p>
                     <p><strong>Номер страховки:</strong> <?php echo $user['num_strax']; ?></p>
+                    <p><strong>Уникальный идентификатор:</strong> <?php echo $user['id_user']; ?></p>
 
                     
                 </div>

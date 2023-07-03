@@ -11,6 +11,10 @@
     background-color: #f0f0f0;
   }
   
+ 
+
+  
+
   section {
     padding: 60px 0;
     background-color: #f5f5f5;
@@ -21,6 +25,7 @@
     margin-bottom: 40px; /* добавлен разрыв между секциями */
     }
   
+
 
 
 
@@ -207,7 +212,3 @@
       line-height: 1.5;
       color: #666;
     }
-    
-
-     
-
