@@ -7,10 +7,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 // Подключение к базе данных
-$db_host = '127.0.0.1:3306';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'mydb';
+$db_host = '192.168.0.200:3306';
+$db_user = 'stis3-40';
+$db_pass = 'i3mL3!H}r';
+$db_name = 'mydbs3';
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {

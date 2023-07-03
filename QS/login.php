@@ -17,10 +17,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 // Проверка, была ли отправлена форма входа
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Подключение к базе данных
-    $db_host = '127.0.0.1:3306';
-    $db_user = 'root';
-    $db_pass = '';
-    $db_name = 'mydb';
+    $db_host = '192.168.0.200:3306';
+    $db_user = 'stis3-40';
+    $db_pass = 'i3mL3!H}r';
+    $db_name = 'mydbs3';
 
     $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
     if ($conn->connect_error) {
@@ -80,81 +80,80 @@ $error = isset($_GET['error']) ? $_GET['error'] : 0;
     <title>Вход</title>
     <link rel="icon" href="images/logo.png">
     <style>
-    .login-form {
-	max-width: 500px;
-	width: 50%;
-	margin: 0 auto;
-	padding: 30px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: arial, sans-serif;
-}
+        .login-form {
+            max-width: 500px;
+            width: 50%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: arial, sans-serif;
+        }
 
-h1 {
-	text-align: center;
-	font-size: 2rem;
-	margin-bottom: 20px;
-}
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
-form {
-	display: flex;
-	flex-direction: column;
-}
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-label {
-	font-weight: bold;
-	margin-bottom: 5px;
-}
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-input[type=text],
-input[type=password],
-input[type=submit] {
-	padding: 10px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	border: none;
-	transition: box-shadow 0.3s ease-in-out;
-}
+        input[type=text],
+        input[type=password],
+        input[type=submit] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            transition: box-shadow 0.3s ease-in-out;
+        }
 
-input[type=text]:hover,
-input[type=password]:hover {
-	box-shadow: 0 0 5px #3300FF;
-}
+        input[type=text]:hover,
+        input[type=password]:hover {
+            box-shadow: 0 0 5px #3300FF;
+        }
 
-input[type=submit] {
-	background-color: #3300FF;
-	color: #fff;
-	cursor: pointer;
-}
+        input[type=submit] {
+            background-color: #3300FF;
+            color: #fff;
+            cursor: pointer;
+        }
 
-input[type=submit]:hover {
-	background-color: #3300FF;
-}
+        input[type=submit]:hover {
+            background-color: #3300FF;
+        }
 
-p {
-	margin-top: 10px;
-	text-align: center;
-}
+        p {
+            margin-top: 10px;
+            text-align: center;
+        }
 
-a {
-	color: #3300FF;
-}
+        a {
+            color: #3300FF;
+        }
 
-label[for="confirm-password"] {
-	margin-top: 20px;
-}
+        label[for="confirm-password"] {
+            margin-top: 20px;
+        }
 
-#confirm-password {
-	margin-bottom: 20px;
-}
+        #confirm-password {
+            margin-bottom: 20px;
+        }
 
-#password:focus,
-#confirm-password:focus {
-	outline: none;
-	border: 2px solid #3300FF;
-}
-
+        #password:focus,
+        #confirm-password:focus {
+            outline: none;
+            border: 2px solid #3300FF;
+        }
     </style>
 </head>
 

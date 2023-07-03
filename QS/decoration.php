@@ -1,9 +1,9 @@
 <?php
 // Подключение к базе данных
-$db_host = '127.0.0.1:3306';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'mydb';
+$db_host = '192.168.0.200:3306';
+$db_user = 'stis3-40';
+$db_pass = 'i3mL3!H}r';
+$db_name = 'mydbs3';
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
@@ -68,6 +68,12 @@ $conn->close();
     <link rel="stylesheet" type="text/css" href="CSS/header.css">
     <link rel="stylesheet" type="text/css" href="CSS/footer.css">
     <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+
+        }
+
        section {
             background-color: #f2f2f2;
             padding: 20px;
